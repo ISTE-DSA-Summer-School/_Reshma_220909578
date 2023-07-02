@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a[50],n,temp,i,j;
+    cout<<"enter the number of elements: ";
+    cin>>n;
+    cout<<"enter the elements";
+    for (int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for (int i=0; i<n; i++) {
+        int m=i;
+        for (int j=i+1;j<n-i;j++) {
+            if (a[j] < a[m]) 
+            m=j;   
+        }
+        int temp = a[i];
+        a[i] = a[m];
+        a[m] = temp;
+}
+    for(int i=0;i<n;i++){
+        cout<<a[i];
+    }
+return 0;
+}
